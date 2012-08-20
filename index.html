@@ -21,7 +21,7 @@
     <div class="inner">
         <h1>Lou-extensions</h1>
 
-        <h2>Collection of abandoned extensions for the browser game Lord Of Ultima</h2>
+        <h2>Extension manager for Lord Of Ultima</h2>
         <a href="https://github.com/ConanLoxley/lou-extensions" class="button">
             <small>View project on</small>
             GitHub</a>
@@ -31,33 +31,52 @@
 <div id="content-wrapper">
     <div class="inner clearfix">
         <section id="main-content">
-            <p>This project aims to provide a community driven maintenance for Chrome extensions and GreaseMonkey
-                scripts for <a href="http://www.lordofultima.com/">Lord Of Ultima (LoU)</a> that are not actively maintained by their
-                original authors anymore but still add vital functionality to LOU. On a regular basis EA and Phenomic
-                studios launch new patches that break these extensions so they need to be fixed. </p>
-
+            <p>This project aims to provide basic functionality to the community for writing their own Chrome extensions and GreaseMonkey
+                scripts for <a href="http://www.lordofultima.com/">Lord Of Ultima (LoU)</a>.</p>
+			<h3>Features</h3>
+			<ul>
+				<li>Dynamic script loader to inject and eject scripts on the fly.</li>
+				<li>Backwards compatibility layer to ensure older LoU scrips keep functioning.</li>
+				<li>A modified <a href="http://userscripts.org/scripts/show/84343">LoU BoS 1.6.0</a> using these features.</li>
+			</ul>
+			
             <h3>Install latest lou-extensions</h3>
 
-            <p>This version takes advantage of the auto-update features that are built-in in recent versions of Greasemonkey and Google Chrome.
+            <p>This version includes a set of functions that recreates functions that were removed in the recent patch that upgraded the game from Qooxdoo 1.4 to Qooxdoo 2.1. The compatibility functions make sure that older versions of LoU BoS, LoU Tweak, LoU Suite and others continue working without requiring an update from their original authors.
                 View the <a href="https://github.com/ConanLoxley/lou-extensions/wiki">change log</a> on the project wiki.</p>
-
-            <p><img src="http://conanloxley.github.com/lou-extensions/images/chrome.gif" alt="google chrome logo"><br>
-                Google Chrome version 18 or higher:<br><a
-                        href="http://conanloxley.github.com/lou-extensions/release/lou-extensions.crx">install
-                    lou-extension version 0.5.0 for Chrome</a> (release date 24th July 2012)</p>
-
+			<h4>Version 0.6.0 - Release date 21th August 2012</h4>
+			
             <p><img src="http://conanloxley.github.com/lou-extensions/images/greasemonkey.jpg"
                     alt="Greasemonkey logo"><br>
                 Greasemonkey 0.9.16 or higher:<br><a
-                        href="https://userscripts.org/scripts/source/138566.user.js">install
-                    lou-extension version 0.5.1 for Greasemonkey</a> (release date 24th July 2012)</p>
+                        href="https://userscripts.org/scripts/source/138566.user.js">Install
+                    lou-extension version 0.6.0 for Greasemonkey</a></p>
+					
+            <p><img src="http://conanloxley.github.com/lou-extensions/images/chrome.gif" alt="google chrome logo"><br>
+                Google Chrome version 18 or higher:<br><a
+                        href="http://conanloxley.github.com/lou-extensions/release/lou-extensions.crx">Download
+                    lou-extension version 0.6.0 for Chrome</a></p>
+					<p>Installation steps:<ol>
+					<li>Download and save the chrome extension to your local disk and open the download folder.</li>
+					<li>In Chrome go to the extensions page: menu --> wrench icon --> tools --> extensions</li>
+					<li>This opens the Chrome extensions page <strong>chrome://chrome/extensions/</strong></li>
+					<li>Drag the downloaded extensions from your local disk onto the extensions page</li>
+					</ol></p>
 
             <h3>Older versions</h3>
             <p>Extension installed from this section do not use auto-update features. Install from here if you don't want to follow the automatic update cycle. This could be useful in case a newer version doesn't work</p>
-            <p><a href="http://conanloxley.github.com/lou-extensions/release-0-4-0/lou-extensions.crx">install
+            
+			<p><a href="http://conanloxley.github.com/lou-extensions/release-0-5-1/lou-extensions.crx">install
+                lou-extension version 0.5.0 for Chrome</a> (release date 24th July 2012)<br/>
+                <a href="http://conanloxley.github.com/lou-extensions/release-0-5-1/greasemonkey.user.js">install
+                    lou-extension version 0.5.1 for Greasemonkey</a> (release date 24th July 2012)
+			</p>
+			
+			<p><a href="http://conanloxley.github.com/lou-extensions/release-0-4-0/lou-extensions.crx">install
                 lou-extension version 0.4.0 for Chrome</a> (release date 17th July 2012)<br/>
                 <a href="http://conanloxley.github.com/lou-extensions/release-0-4-0/greasemonkey.user.js">install
-                    lou-extension version 0.4.0 for Greasemonkey</a> (release date 17th July 2012)</p>
+                    lou-extension version 0.4.0 for Greasemonkey</a> (release date 17th July 2012)
+			</p>
         </section>
 
         <aside id="sidebar">

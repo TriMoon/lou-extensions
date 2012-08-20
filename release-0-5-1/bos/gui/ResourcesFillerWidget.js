@@ -50,10 +50,6 @@ loader.addFinishHandler(function() {
 
             this.moveTo(400, 200);
 
-            this.timer = new qx.event.Timer(1000);
-            this.timer.addListener("interval", this._updateSendingProgress, this);
-
-            this.timer.start();
         },
         members: {
             toX: null,
@@ -66,8 +62,6 @@ loader.addFinishHandler(function() {
             cbPalaceSupport: null,
             lblTarget: null,
             cityInfos: {},
-            progressLabel: null,
-            timer: null,
             activateOverlay: function(activated) {
                 //nothing
             },
@@ -79,9 +73,6 @@ loader.addFinishHandler(function() {
                 btnAdd.setWidth(160);
                 container.add(btnAdd);
                 btnAdd.addListener("click", this.fillResources, this);
-
-                this.progressLabel = new qx.ui.basic.Label("");
-                container.add(this.progressLabel);
 
                 return container;
             },
@@ -244,7 +235,7 @@ loader.addFinishHandler(function() {
 
                 this.cbPalaceSupport = new qx.ui.form.CheckBox(tr("cbPalaceSupport"));
                 this.cbPalaceSupport.setToolTipText(tr("cbPalaceSupport_toolTip"));
-                this.cbPalaceSupport.setValue(true);
+                this.cbPalaceSupport.setValue(false);
                 container.add(this.cbPalaceSupport, {
                     row: row,
                     column: 1
@@ -311,10 +302,6 @@ loader.addFinishHandler(function() {
                     var freeSpace = Math.max(0, parseInt(bosCity.getResourceMaxStorage(resType)) - parseInt(bosCity.getTradeIncomingResources(resType)) - parseInt(bosCity.getResourceCount(resType)));
                     this.maxResourcesInput.setValue(freeSpace);
                 }
-            },
-            _updateSendingProgress: function() {
-        			var count = bos.net.CommandManager.getInstance().getNumberOfPendingCommands();
-        			this.progressLabel.setValue(tr("in queue") + ": " + count);
             }
         }
     });
